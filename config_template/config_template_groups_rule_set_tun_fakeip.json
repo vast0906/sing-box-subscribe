@@ -5,7 +5,7 @@
   },
   "experimental": {
     "clash_api": {
-      "external_controller": "127.0.0.1:9090",
+      "external_controller": "0.0.0.0:9090",
       "external_ui": "ui",
       "secret": "",
       "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
@@ -137,42 +137,48 @@
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
         "Others"
       ],
-      "default": "America"
+      "default": "Self-build"
     },
     {
       "tag":"Google",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "Self-build"
     },
     {
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
         "Others"
-      ]
+      ],
+      "default": "Self-build"
     },
     {
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -185,6 +191,7 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -206,6 +213,7 @@
       "tag":"Bahamut",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -213,12 +221,13 @@
         "America",
         "Others"
       ],
-      "default": "TaiWan"
+      "default": "Self-build"
     },
     {
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -231,18 +240,20 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America"
       ],
-      "default": "Singapore"
+      "default": "Self-build"
     },
     {
       "tag":"NETFLIX",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -281,6 +292,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -294,6 +306,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -306,6 +319,7 @@
       "tag":"Streaming",
       "type":"selector",
       "outbounds":[
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -319,6 +333,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -342,6 +357,16 @@
       "outbounds":[
         "block",
         "direct"
+      ]
+    },
+    {
+      "tag":"Self-build",
+      "type":"selector",
+      "outbounds":[
+        "{all}"
+      ],
+      "filter":[
+        {"action":"include","keywords":["Self|self"]}
       ]
     },
     {
@@ -472,10 +497,31 @@
         "outbound": "proxy"
       },
       {
+        "network": "tcp",
+        "port": [
+          22,
+          3308,
+          62056
+        ],
+        "outbound": "direct"
+      },
+      {
+        "domain_suffix": [
+          ".cn",
+          ".baidu.com",
+          ".qq.com",
+          ".tencent.com",
+          ".netease.com",
+          ".163.com"
+        ],
+        "outbound": "direct"
+      },
+      {
         "domain": [
           "clash.razord.top",
           "yacd.metacubex.one",
           "yacd.haishan.me",
+           "hostloc.com",
           "d.metacubex.one"
         ],
         "outbound": "direct"
