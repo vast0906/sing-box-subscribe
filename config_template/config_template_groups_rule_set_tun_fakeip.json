@@ -197,21 +197,24 @@
       "tag":"OpenAI",
       "type":"selector",
       "outbounds":[
+        "proxy",
+        "Optional",
         "Self-build",
         "TaiWan",
         "Singapore",
         "Japan",
         "America",
-        "proxy",
         "Others"
       ],
-      "default": "Self-build"
+      "default": "Optional"
     },
     {
       "tag":"Google",
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -219,13 +222,15 @@
         "America",
         "Others"
       ],
-      "default": "Self-build"
+      "default": "Optional"
     },
     {
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -233,13 +238,15 @@
         "America",
         "Others"
       ],
-      "default": "Self-build"
+      "default": "Optional"
     },
     {
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -253,6 +260,8 @@
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -275,6 +284,8 @@
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -289,6 +300,8 @@
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -302,19 +315,23 @@
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
         "Japan",
         "America"
       ],
-      "default": "Self-build"
+      "default": "Optional"
     },
     {
       "tag":"NETFLIX",
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -328,6 +345,8 @@
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -342,6 +361,8 @@
       "outbounds":[
         "direct",
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -356,6 +377,8 @@
       "outbounds":[
         "direct",
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -370,6 +393,8 @@
       "outbounds":[
         "direct",
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -383,6 +408,8 @@
       "type":"selector",
       "outbounds":[
         "proxy",
+        "Optional",
+        "Self-build",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -396,6 +423,8 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "auto",
+        "Optional",
         "Self-build",
         "HongKong",
         "TaiWan",
@@ -404,7 +433,7 @@
         "America",
         "Others"
       ],
-      "default": "HongKong"
+      "default": "auto"
     },
     {
       "tag":"China",
@@ -432,6 +461,16 @@
         {"action":"include","keywords":["Self|self"]}
       ]
     },
+    {
+        "tag":"Optional",
+        "type":"selector",
+        "outbounds":[
+          "{all}"
+        ],
+        "filter":[
+          {"action":"exclude","keywords":["网站|地址|剩余|过期|时间|有效|流量"]}
+        ]
+      },
     {
       "tag":"HongKong",
       "type":"selector",
