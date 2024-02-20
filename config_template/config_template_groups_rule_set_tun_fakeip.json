@@ -187,8 +187,8 @@
       "tag":"proxy",
       "type":"selector",
       "outbounds":[
-        "Self-build",
         "auto",
+        "Self-build",
         "direct",
         "{all}"
       ]
@@ -202,6 +202,7 @@
         "Singapore",
         "Japan",
         "America",
+        "proxy",
         "Others"
       ],
       "default": "Self-build"
@@ -210,7 +211,7 @@
       "tag":"Google",
       "type":"selector",
       "outbounds":[
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -224,7 +225,7 @@
       "tag":"Telegram",
       "type":"selector",
       "outbounds":[
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -238,7 +239,7 @@
       "tag":"Twitter",
       "type":"selector",
       "outbounds":[
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -251,7 +252,7 @@
       "tag":"Facebook",
       "type":"selector",
       "outbounds":[
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -273,7 +274,7 @@
       "tag":"Bahamut",
       "type":"selector",
       "outbounds":[
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -281,13 +282,13 @@
         "America",
         "Others"
       ],
-      "default": "Self-build"
+      "default": "proxy"
     },
     {
       "tag":"Spotify",
       "type":"selector",
       "outbounds":[
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -300,7 +301,7 @@
       "tag":"TikTok",
       "type":"selector",
       "outbounds":[
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -313,7 +314,7 @@
       "tag":"NETFLIX",
       "type":"selector",
       "outbounds":[
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -326,6 +327,7 @@
       "tag":"Disney+",
       "type":"selector",
       "outbounds":[
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -339,6 +341,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -352,7 +355,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -366,7 +369,7 @@
       "type":"selector",
       "outbounds":[
         "direct",
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -379,7 +382,7 @@
       "tag":"Streaming",
       "type":"selector",
       "outbounds":[
-        "Self-build",
+        "proxy",
         "HongKong",
         "TaiWan",
         "Singapore",
