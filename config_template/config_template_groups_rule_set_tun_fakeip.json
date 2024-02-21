@@ -60,7 +60,7 @@
           "cdn.jsdelivr.net",
           "testingcf.jsdelivr.net"
         ],
-        "server": "fakeip"
+        "server": "dns_direct"
       },
       {
         "rule_set": "geosite-category-ads-all",
