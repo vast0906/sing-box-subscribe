@@ -99,7 +99,7 @@
       }
     ],
     "final": "dns_direct",
-    "independent_cache": false
+    "independent_cache": true
   },
   "inbounds": [
     {
@@ -593,11 +593,6 @@
         "outbound": "dns-out"
       },
       {
-        "network": "udp",
-        "port": 443,
-        "outbound": "block"
-      },
-      {
         "rule_set": "geosite-category-ads-all",
         "outbound": "AdBlock"
       },
@@ -617,6 +612,12 @@
           62056
         ],
         "outbound": "direct"
+      },
+      {
+        "domain_suffix": [
+          "cloud.cupronickel.goog"
+        ],
+        "outbound": "Google"
       },
       {
         "process_name": [
@@ -756,7 +757,7 @@
         "outbound": "Streaming"
       },
       {
-        "rule_set": "geosite-geolocation-!cn",
+        "rule_set": ["geosite-geolocation-!cn", "geosite-proxy"],
         "outbound": "Global"
       },
       {
@@ -774,6 +775,11 @@
       {
         "rule_set": "geosite-cn",
         "outbound": "China"
+      },
+      {
+        "network": "udp",
+        "port": 443,
+        "outbound": "block"
       },
       {
         "inbound": [
@@ -964,6 +970,13 @@
         "type": "remote",
         "format": "binary",
         "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/microsoft.srs",
+        "download_detour": "direct"
+      },
+      {
+        "tag": "geosite-proxy",
+        "type": "remote",
+        "format": "binary",
+        "url": "https://mirror.ghproxy.com/https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/sing/geo/geosite/proxy.srs",
         "download_detour": "direct"
       },
       {
