@@ -524,7 +524,9 @@
         },
         {
           "domain_suffix": [
-            "cloud.cupronickel.goog"
+            "cloud.cupronickel.goog",
+            "xn--ngstr-lra8j.com",
+            "googleapis.cn"
           ],
           "outbound": "Google"
         },
