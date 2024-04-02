@@ -302,8 +302,8 @@
       "tag":"Microsoft",
       "type":"selector",
       "outbounds":[
-        "direct",
         "proxy",
+        "direct",
         "Optional",
         "Self-build",
         "HongKong",
@@ -349,6 +349,7 @@
       "tag":"Global",
       "type":"selector",
       "outbounds":[
+        "proxy",
         "direct",
         "auto",
         "Optional",
