@@ -16,9 +16,9 @@
         },
         "clash_api": {
           "external_controller": "0.0.0.0:9090",
-          "external_ui": "metacubexd",
-          "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip",
-          "external_ui_download_detour": "select",
+          "external_ui": "ui",
+          "external_ui_download_url": "https://mirror.ghproxy.com/https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
+          "external_ui_download_detour": "direct",
           "default_mode": "rule"
         }
     },
@@ -113,8 +113,8 @@
         "tag":"proxy",
         "type":"selector",
         "outbounds":[
-          "auto",
           "Self-build",
+          "auto",
           "direct",
           "{all}"
         ]
@@ -164,7 +164,7 @@
           "America",
           "Others"
         ],
-        "default": "Optional"
+        "default": "proxy"
       },
       {
         "tag":"Twitter",
@@ -301,8 +301,8 @@
         "tag":"Microsoft",
         "type":"selector",
         "outbounds":[
-          "direct",
           "proxy",
+          "direct",
           "Optional",
           "Self-build",
           "HongKong",
@@ -348,6 +348,7 @@
         "tag":"Global",
         "type":"selector",
         "outbounds":[
+          "proxy",
           "direct",
           "auto",
           "Optional",
