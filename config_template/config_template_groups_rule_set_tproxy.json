@@ -94,11 +94,9 @@
       {
         "type": "tproxy",
         "tag": "tproxy-in",
-        "network": "udp",
         "listen": "::",
         "listen_port": 15353,
         "tcp_fast_open": true,
-        "tcp_multi_path": false,
         "udp_fragment": true,
         "udp_timeout": "5m",
         "sniff": true,
